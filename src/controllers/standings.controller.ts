@@ -5,7 +5,7 @@ import { StandingsService } from "../services";
 export const getStandings = async (
   req: Request,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ): Promise<Response | void> => {
   try {
     const league = req.params.league as string;
@@ -20,23 +20,3 @@ export const getStandings = async (
     next(error);
   }
 };
-
-// export const getSeasonStats = async(
-//     req: Request,
-//     res: Response,
-//     next: NextFunction
-//     ): Promise<Response | void> => {
-//     try {
-//         const league = req.params.league as string;
-//         const leagueId = LEAGUE_IDS[league.toUpperCase()];
-//         if (!leagueId) {
-//         return res.status(404).json({ message: "Invalid league name!" });
-//         }
-    
-//         const stats = await StandingsService.getSeasonStats(leagueId);
-//         return res.json(stats);
-//     } catch (error) {
-//         next(error);
-//     }
-//     }
-// )

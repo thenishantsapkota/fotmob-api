@@ -19,7 +19,7 @@ export class FotMobAPI {
       await redis.setex(
         cacheKey,
         CACHE_EXPIRATION,
-        JSON.stringify(response.data)
+        JSON.stringify(response.data),
       );
 
       return response.data;

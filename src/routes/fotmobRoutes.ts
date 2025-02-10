@@ -1,5 +1,5 @@
 import express from "express";
-import {  getStandings } from "../controllers";
+import { getStandings } from "../controllers";
 
 const router = express.Router();
 

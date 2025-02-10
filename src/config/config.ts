@@ -11,8 +11,8 @@ export const envVars = {
     REDIS_HOST: process.env.REDIS_HOST || "localhost",
     REDIS_PORT: process.env.REDIS_PORT || 6379,
   },
-  JWT:{
+  JWT: {
     SECRET: process.env.JWT_SECRET,
-    EXPIRES_IN: process.env.JWT_EXPIRES_IN
-  }
+    EXPIRES_IN: process.env.JWT_EXPIRES_IN,
+  },
 };
